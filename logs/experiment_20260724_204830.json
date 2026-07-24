@@ -1,0 +1,12 @@
+{
+    "timestamp": "2026-07-24 20:48:30",
+    "model": "XGBoost",
+    "train_size": 168979,
+    "test_size": 42245,
+    "feature_count": 35,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0
+}

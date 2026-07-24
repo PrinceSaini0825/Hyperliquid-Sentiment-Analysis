@@ -1,0 +1,17 @@
+MIT License
+
+Copyright (c) 2026 Prince Saini
+
+Permission is hereby granted...
+---
+
+# requirements.txt
+
+```txt
+pandas
+numpy
+matplotlib
+streamlit
+joblib
+scikit-learn
+scipy

@@ -1,0 +1,25 @@
+# Data
+data/*.csv
+
+# Generated outputs
+results/
+figures/
+
+# Reports generated
+reports/
+
+# CatBoost logs
+catboost_info/
+
+# Models
+models/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/

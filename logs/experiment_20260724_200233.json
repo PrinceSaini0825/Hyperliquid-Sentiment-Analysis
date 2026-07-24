@@ -1,0 +1,12 @@
+{
+    "timestamp": "2026-07-24 20:02:33",
+    "model": "Gradient Boosting",
+    "train_size": 168979,
+    "test_size": 42245,
+    "feature_count": 27,
+    "accuracy": 0.4437211504320038,
+    "precision": 0.39841688654353563,
+    "recall": 0.9989723167833515,
+    "f1_score": 0.5696443614254844,
+    "roc_auc": 0.6380822552237747
+}
