@@ -1,0 +1,12 @@
+{
+    "timestamp": "2026-07-24 19:37:38",
+    "model": "Random Forest",
+    "train_size": 168979,
+    "test_size": 42245,
+    "feature_count": 27,
+    "accuracy": 0.623718783287963,
+    "precision": 0.4902347249596846,
+    "recall": 0.5272014901406641,
+    "f1_score": 0.5080465461747957,
+    "roc_auc": 0.6625777869004119
+}
