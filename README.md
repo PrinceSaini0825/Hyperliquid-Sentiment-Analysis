@@ -1,410 +1,660 @@
-# 🚀 Hyperliquid Sentiment Analysis
-### AI-Powered Cryptocurrency Trading Intelligence Platform
+# 🚀 Hyperliquid Sentiment Analysis AI
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)]()
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)]()
-[![XGBoost](https://img.shields.io/badge/XGBoost-Enabled-green)]()
-[![LightGBM](https://img.shields.io/badge/LightGBM-Enabled-brightgreen)]()
-[![CatBoost](https://img.shields.io/badge/CatBoost-Enabled-yellow)]()
-[![License](https://img.shields.io/badge/License-MIT-blue)]()
-[![Status](https://img.shields.io/badge/Status-Completed-success)]()
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Machine Learning](https://img.shields.io/badge/ML-XGBoost-green)
+![LLM](https://img.shields.io/badge/AI-LLM-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
----
 
-## 📌 Overview
+# 📌 Overview
 
-This project develops a complete machine learning pipeline that analyzes cryptocurrency trader behavior under different market sentiment conditions using **Hyperliquid historical trading data** and the **Bitcoin Fear & Greed Index**.
+**Hyperliquid Sentiment Analysis AI** is an end-to-end Artificial Intelligence and Machine Learning platform that analyzes the relationship between:
 
-The pipeline automatically performs
+- Crypto market sentiment
+- Trader behaviour
+- Profitability patterns
+- Trading signals
+- Risk conditions
 
-- Data ingestion
-- Data preprocessing
-- Feature engineering
-- Statistical analysis
-- Machine learning
-- Explainability (SHAP)
-- Strategy optimization
-- Backtesting
-- Risk analysis
-- Portfolio analytics
-- Live trading signal generation
-- Professional report generation
 
----
+The system combines:
 
-# 🎯 Project Goals
+- Bitcoin Fear & Greed Index data
+- Hyperliquid historical trader execution data
+- Machine learning prediction models
+- Confidence-based signal generation
+- LLM-powered AI financial analytics assistant
 
-- Understand how market sentiment affects trader profitability.
-- Engineer trader intelligence features.
-- Train multiple ML models.
-- Optimize prediction thresholds.
-- Evaluate trading strategies.
-- Generate explainable trading signals.
-- Build a production-ready quantitative research pipeline.
+
+The objective is to understand how market psychology impacts trader performance and generate explainable AI-driven insights.
 
 ---
 
-# 📊 Dataset
+# ✨ Features
 
-### Hyperliquid Historical Trades
 
-Contains over
+## 📊 Market Sentiment Analysis
 
-> **211,224 historical cryptocurrency trades**
+The platform analyzes market psychology using Fear & Greed indicators.
 
-Features include
+Features:
 
-- Coin
-- Trade Size
-- Execution Price
+- Fear / Greed classification
+- Extreme sentiment detection
+- Sentiment distribution analysis
+- Market condition evaluation
+
+
+---
+
+## 💹 Trader Performance Analytics
+
+The system evaluates historical trader behaviour.
+
+Analytics include:
+
+- Profit and Loss analysis
+- Winning and losing trades
+- Trading frequency
+- Coin-wise trading behaviour
+- Position behaviour
+- Leverage utilization
+
+
+---
+
+## 🤖 Machine Learning Trading Signals
+
+The ML pipeline generates automated trading signals:
+
+| Signal | Meaning |
+|---|---|
+| 🟢 BUY | Positive market opportunity |
+| 🔴 SELL | Negative market condition |
+| 🟡 HOLD | Low confidence / uncertain condition |
+
+
+Each prediction contains:
+
+- Asset
+- Prediction probability
+- Confidence score
+- Risk level
+- Position sizing recommendation
+
+
+---
+
+## 💬 AI Market Analyst
+
+An integrated LLM-based assistant provides natural language access to analytics.
+
+The AI assistant can answer:
+
+- How did traders perform during Fear periods?
+- Which coins generated the highest profits?
+- What is the current market sentiment?
+- Explain the latest trading signals.
+- Summarize trader behaviour patterns.
+
+
+---
+
+# 🏗 System Architecture
+
+The Hyperliquid Sentiment Analysis AI platform follows an end-to-end AI/ML pipeline architecture integrating market sentiment, trader analytics, machine learning prediction, and LLM-based insights.
+
+```text
+
+                    ┌──────────────────────────┐
+                    │       Data Sources        │
+                    ├──────────────────────────┤
+                    │                          │
+                    │ Hyperliquid Trader Data  │
+                    │ - Executions             │
+                    │ - Positions              │
+                    │ - PnL                    │
+                    │ - Leverage               │
+                    │                          │
+                    │ Fear & Greed Index       │
+                    │ - Sentiment              │
+                    │ - Market Psychology      │
+                    │                          │
+                    └─────────────┬────────────┘
+                                  │
+                                  ↓
+
+                    ┌──────────────────────────┐
+                    │ Data Processing Layer    │
+                    ├──────────────────────────┤
+                    │                          │
+                    │ Data Loading             │
+                    │ Data Cleaning            │
+                    │ Missing Value Handling  │
+                    │ Normalization            │
+                    │ Feature Preparation      │
+                    │                          │
+                    └─────────────┬────────────┘
+                                  │
+                                  ↓
+
+                    ┌──────────────────────────┐
+                    │ Feature Engineering      │
+                    ├──────────────────────────┤
+                    │                          │
+                    │ Trader Features          │
+                    │ - Win/Loss Patterns     │
+                    │ - Trading Frequency     │
+                    │ - Position Behaviour    │
+                    │                          │
+                    │ Market Features          │
+                    │ - Sentiment State       │
+                    │ - Market Conditions     │
+                    │                          │
+                    └─────────────┬────────────┘
+                                  │
+                                  ↓
+
+                    ┌──────────────────────────┐
+                    │ Machine Learning Layer   │
+                    ├──────────────────────────┤
+                    │                          │
+                    │ Classification Models    │
+                    │ Prediction Probability  │
+                    │ Confidence Estimation   │
+                    │ Risk Assessment         │
+                    │                          │
+                    └─────────────┬────────────┘
+                                  │
+                                  ↓
+
+                    ┌──────────────────────────┐
+                    │ Signal Generation Engine │
+                    ├──────────────────────────┤
+                    │                          │
+                    │ BUY Signal              │
+                    │ SELL Signal             │
+                    │ HOLD Signal             │
+                    │                          │
+                    │ Position Size           │
+                    │ Confidence Score        │
+                    │ Risk Level              │
+                    │                          │
+                    └─────────────┬────────────┘
+                                  │
+                                  ↓
+
+                    ┌──────────────────────────┐
+                    │ AI Analytics Assistant   │
+                    ├──────────────────────────┤
+                    │                          │
+                    │ LLM Reasoning            │
+                    │ Market Explanation      │
+                    │ Performance Insights    │
+                    │ Natural Language Query  │
+                    │                          │
+                    └─────────────┬────────────┘
+                                  │
+                                  ↓
+
+                    ┌──────────────────────────┐
+                    │ Streamlit Dashboard      │
+                    ├──────────────────────────┤
+                    │                          │
+                    │ Analytics Dashboard      │
+                    │ Trading Signals          │
+                    │ Sentiment Charts         │
+                    │ AI Chat Interface        │
+                    │                          │
+                    └──────────────────────────┘
+
+```
+
+---
+
+# 🔄 Machine Learning Workflow
+
+
+## 1. Data Collection
+
+The system processes two primary datasets.
+
+
+### Hyperliquid Historical Trader Data
+
+Contains:
+
+- Account information
+- Coin symbol
+- Execution price
+- Trade size
+- Position information
+- Buy/Sell side
 - Closed PnL
-- Fee
-- Position Size
-- Timestamp
-- Trade Direction
-- Order Information
+- Leverage
+
+
+### Bitcoin Fear & Greed Index
+
+Contains:
+
+- Date
+- Sentiment classification
+- Market psychology indicators
+
 
 ---
 
-### Fear & Greed Index
+# 2. Data Preprocessing
 
-Contains
+The preprocessing pipeline performs:
 
-> **2,644 daily sentiment observations**
+- Data loading
+- Data cleaning
+- Timestamp conversion
+- Numerical conversion
+- Missing value handling
+- Dataset synchronization
+- Feature normalization
 
-Sentiment Classes
-
-- Extreme Fear
-- Fear
-- Neutral
-- Greed
-- Extreme Greed
-
----
-
-# 🏗 Pipeline Architecture
-
-```
-Stage 1
-Data Loading
-        │
-        ▼
-Stage 2
-Preprocessing
-        │
-        ▼
-Stage 3
-Data Merge
-        │
-        ▼
-Stage 4
-EDA & Visualization
-        │
-        ▼
-Stage 5
-Feature Engineering
-        │
-        ▼
-Stage 6
-ML Dataset
-        │
-        ▼
-Stage 7
-Baseline Models
-        │
-        ▼
-Stage 8
-Training
-        │
-        ▼
-Stage 9
-Advanced Optimization
-        │
-        ▼
-Stage 10
-Trader Intelligence
-        │
-        ▼
-Stage 11
-Backtesting
-        │
-        ▼
-Stage 12
-Strategy Optimization
-        │
-        ▼
-Stage 13
-Risk Engine
-        │
-        ▼
-Stage 14
-Portfolio Analytics
-        │
-        ▼
-Stage 15
-Live Trading Signal Engine
-```
 
 ---
 
-# ⚙️ Machine Learning Models
+# 3. Feature Engineering
 
-✔ Logistic Regression
 
-✔ Random Forest
+## Trader Behaviour Features
 
-✔ XGBoost
+Generated features:
 
-✔ LightGBM
+- Average profit/loss
+- Win ratio
+- Trading frequency
+- Position behaviour
+- Leverage utilization
 
-✔ CatBoost
 
----
+## Sentiment Features
 
-# 📈 Final Model Performance
+Generated features:
 
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
-|--------|-----------|------------|----------|---------|---------|
-| XGBoost | **69.64%** | **61.38%** | **77.13%** | **68.36%** | **0.7793** |
-| LightGBM | 68.79% | 60.15% | 78.79% | 68.22% | 0.7736 |
-| CatBoost | 64.67% | 55.87% | 80.43% | 65.94% | 0.7380 |
+- Fear periods
+- Greed periods
+- Extreme market conditions
+- Sentiment transitions
 
----
-
-# 📊 Evaluation
-
-Accuracy
-
-67.72%
-
-Precision
-
-58.80%
-
-Recall
-
-80.49%
-
-F1 Score
-
-67.95%
-
-ROC-AUC
-
-0.7793
 
 ---
 
-# 🔥 Feature Engineering
+# 4. Machine Learning Prediction
 
-The project generates more than **30 engineered features**, including
 
-- Historical Trader PnL
-- Trader Win Rate
-- Average Position Size
-- Coin Frequency
-- Rolling Profit
-- Rolling Volume
-- Fee Ratio
-- Trade Count
-- Historical Trade Size
-- Price Change
-- Market Sentiment Encoding
-- Risk Features
+The ML pipeline generates:
+
+- Market behaviour predictions
+- Trading probability scores
+- Confidence values
+- Risk classification
+
+
+Workflow:
+
+```text
+Prediction Probability
+
+        ↓
+
+Confidence Score
+
+        ↓
+
+Trading Decision
+
+        ↓
+
+Risk Assessment
+```
+
 
 ---
 
-# 🧠 Explainable AI
+# 🤖 Machine Learning Models
 
-The pipeline integrates SHAP explainability.
 
-Top Features
+The project architecture supports:
 
-- Fee Ratio
-- Rolling PnL
-- Trader Trade Count
-- Coin
-- Start Position
-- Execution Price
-- Rolling Trade Size
-- Historical Average Trade Size
+- Logistic Regression baseline model
+- XGBoost classifier
+- Time-series validation
+- Threshold optimization
+- Confidence-based prediction
+
 
 ---
 
-# 📉 Strategy Optimization
+# 🧠 AI Assistant Architecture
 
-Optimized Probability Threshold
+
+The integrated AI analyst provides natural language access to analytics.
+
+
+```text
+
+User Query
+
+      ↓
+
+LLM Agent
+
+      ↓
+
+Analytics Tools
+
+      ↓
+
+Dataset / Model Outputs
+
+      ↓
+
+AI Generated Explanation
 
 ```
-0.60
-```
 
-Sharpe Ratio
 
-```
-7.916
-```
-
-Maximum Drawdown
+Example queries:
 
 ```
--8.91%
+How did traders perform during Fear periods?
+
+Which coins generated the highest profit?
+
+Explain the latest trading signals.
+
+What is the current market sentiment?
 ```
+
 
 ---
 
-# 📈 Backtesting
+# 📈 Results & Insights
 
-Total Return
 
-```
-380.72%
-```
+The system generates:
 
-Sharpe Ratio
+- Sentiment-based trader analysis
+- Automated BUY/SELL/HOLD signals
+- Confidence-aware predictions
+- Risk classification
 
-```
-4.52
-```
 
-Maximum Drawdown
+Example output:
 
-```
--8.48%
-```
+| Asset | Signal | Confidence | Risk |
+|---|---|---|---|
+| HYPE | HOLD | Very Low | Very High |
+| HYPE | BUY | Low | High |
+| HYPE | SELL | Medium | Medium |
+
 
 ---
 
-# 📡 Live Trading Signals
+# 📊 Dashboard Modules
 
-Automatically predicts
 
-- BUY
-- SELL
-- HOLD
+## 🏠 Overview Dashboard
 
-Generates
+Provides:
 
-- Confidence Score
-- Position Size
-- Risk Level
-- Trade Recommendation
+- Total trades
+- Total PnL
+- Average PnL
+- Market sentiment overview
+- Performance visualization
 
-Example
 
-```
-Coin
+## 🧠 Sentiment Analysis
 
-HYPE
+Provides:
 
-Signal
+- Fear & Greed distribution
+- Market psychology analysis
+- Sentiment trends
 
-BUY
 
-Probability
+## 💹 Trader Performance
 
-69.14%
+Provides:
 
-Confidence
+- Winning trades
+- Losing trades
+- Win rate
+- Top traded assets
 
-38.29%
-```
+
+## 🤖 Trading Signals
+
+Provides:
+
+- BUY / SELL / HOLD signals
+- Confidence scores
+- Risk classification
+
+
+## 💬 AI Chatbot
+
+Provides:
+
+- Market explanation
+- Trader behaviour analysis
+- Signal interpretation
+
+
+---
+
+# 📸 Dashboard Preview
+
+
+## Overview
+
+![Overview](assets/screenshots/overview.png)
+
+
+## Sentiment Analysis
+
+![Sentiment](assets/screenshots/sentiment.png)
+
+
+## Trader Performance
+
+![Performance](assets/screenshots/performance.png)
+
+
+## Trading Signals
+
+![Signals](assets/screenshots/signals.png)
+
+
+## AI Chatbot
+
+![Chatbot](assets/screenshots/chatbot.png)
+
+
+---
+
+# 🛠 Technology Stack
+
+
+## Programming
+
+- Python 3.10+
+- Pandas
+- NumPy
+
+
+## Machine Learning
+
+- Scikit-learn
+- XGBoost
+
+
+## Visualization
+
+- Streamlit
+- Plotly
+
+
+## Artificial Intelligence
+
+- LLM Agent Architecture
+- AI Analytics Tools
+- Natural Language Reasoning
+
 
 ---
 
 # 📂 Project Structure
 
-```
-Hyperliquid-Sentiment-Analysis
 
-├── data/
-├── models/
-├── notebooks/
-├── results/
+```text
+Hyperliquid-Sentiment-Analysis/
+
+│
+├── dashboard.py
+├── main.py
+├── requirements.txt
 │
 ├── src/
+│   ├── chatbot/
+│   │   ├── agent.py
+│   │   └── tools.py
+│   │
+│   ├── models/
+│   ├── preprocessing/
+│   ├── validation/
+│   └── loader.py
 │
-│── loader.py
-│── preprocess.py
-│── merger.py
-│── eda.py
-│── visualization.py
-│── features.py
-│── model.py
-│── train.py
-│── evaluate.py
-│── validation.py
-│── hypothesis_test.py
-│── shap_explain.py
-│── stage9_model_optimization.py
-│── stage10_features.py
-│── stage11_backtesting.py
-│── stage12_strategy_optimizer.py
-│── stage13_risk_engine.py
-│── portfolio_visualization.py
-│── stage15_signal_engine.py
-│── report_generator.py
+├── data/
 │
-└── main.py
+├── results/
+│
+├── assets/
+│   └── screenshots/
+│
+└── notebooks/
+
 ```
 
----
-
-# 📦 Outputs
-
-The pipeline automatically generates
-
-- Statistical Reports
-- EDA Charts
-- Feature Importance
-- SHAP Analysis
-- ROC Curve
-- Confusion Matrix
-- Backtesting Report
-- Strategy Optimization Report
-- Portfolio Dashboard
-- Risk Report
-- Trading Signals
-- Final Markdown Report
 
 ---
 
-# 🛠 Technologies
+# ⚙️ Installation
 
-- Python
-- Pandas
-- NumPy
-- Scikit-Learn
-- XGBoost
-- LightGBM
-- CatBoost
-- SHAP
-- Matplotlib
-- SciPy
-- Joblib
+
+Clone repository:
+
+
+```bash
+git clone https://github.com/princesaini0825/Hyperliquid-Sentiment-Analysis.git
+```
+
+
+Move into project:
+
+
+```bash
+cd Hyperliquid-Sentiment-Analysis
+```
+
+
+Create virtual environment:
+
+
+```bash
+python -m venv .venv
+```
+
+
+Activate environment:
+
+
+### macOS/Linux
+
+```bash
+source .venv/bin/activate
+```
+
+
+Install dependencies:
+
+
+```bash
+pip install -r requirements.txt
+```
+
 
 ---
 
-# 🚀 Future Work
+# ▶ Run Dashboard
 
-Planned enhancements include:
 
-- Stage 16: MLOps & Deployment (FastAPI, Streamlit, Docker)
-- Stage 17: Deep Learning (LSTM, Transformer, TFT)
-- Stage 18: Reinforcement Learning Trading Agent
-- Stage 19: Cloud Deployment with CI/CD
-- Stage 20: Research Paper & Portfolio Website
+Start Streamlit:
+
+
+```bash
+streamlit run dashboard.py
+```
+
+
+Open:
+
+
+```
+http://localhost:8501
+```
+
+
+---
+
+# 🚀 Future Improvements
+
+
+Planned improvements:
+
+- Real-time Hyperliquid API integration
+- Live market monitoring
+- Advanced time-series forecasting
+- Reinforcement learning trading agent
+- Real-time AI market assistant
+
+
+---
+
+# 🎯 Project Impact
+
+
+This project demonstrates the integration of:
+
+- Machine Learning
+- Financial Data Analytics
+- LLM-based AI Agents
+- Explainable AI
+- Interactive Visualization
+
+
+for intelligent market behaviour analysis.
+
 
 ---
 
 # 👨‍💻 Author
 
+
 **Prince Saini**
 
-B.Tech Computer Science
+AI/ML Research Engineer Aspirant
 
-AI • Machine Learning • Quantitative Finance • Data Science • Research Engineering
 
----
+GitHub:
 
-## ⭐ If you found this project useful, consider giving it a star!
+https://github.com/princesaini0825
