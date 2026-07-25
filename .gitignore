@@ -23,3 +23,5 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/logs/
+.agents/
+logs/
